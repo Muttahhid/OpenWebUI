@@ -144,6 +144,7 @@
 			</a>
 		</div>
 
+		<!-- Sidebar Settings -->
 		{#if $user?.role === 'admin'}
 			<div class="px-2 flex justify-center mt-0.5">
 				<a
