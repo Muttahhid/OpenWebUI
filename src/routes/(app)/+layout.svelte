@@ -310,8 +310,10 @@
 			class=" text-gray-700 dark:text-gray-100 bg-white dark:bg-gray-900 min-h-screen overflow-auto flex flex-row"
 		>
 			<Sidebar />
-			<SettingsModal bind:hidden={$showSettings} />
-			<ChangelogModal bind:hidden={$showChangelog} />
+			{#if $user.role === 'admin'}
+				<SettingsModal bind:show={$showSettings} />
+			{/if}
+			<ChangelogModal bind:show={$showChangelog} />
 			<slot />
 		</div>
 	</div>

@@ -40,9 +40,9 @@
 	}
 </script>
 
-<!-- {#if $user.role === 'admin' } -->
+{#if $user.role === 'admin' }
 
-	<div class="flex flex-col my-2 acn-display-none">
+	<div class="flex flex-col my-2">
 		{#each selectedModels as selectedModel, selectedModelIdx}
 			<div class="flex">
 				<select
@@ -148,10 +148,4 @@
 		<button on:click={saveDefaultModel}> Set as default</button>
 	</div>
 
-<!-- {/if} -->
-
-<style>
-	.acn-display-none{
-		/* display: none; */
-	}
-</style>
+{/if}
