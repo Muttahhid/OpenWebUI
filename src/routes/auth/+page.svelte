@@ -4,6 +4,7 @@
 	import { WEBUI_API_BASE_URL, WEBUI_BASE_URL } from '$lib/constants';
 	import { WEBUI_NAME, config, user } from '$lib/stores';
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import toast from 'svelte-french-toast';
 
 	let loaded = false;
@@ -61,7 +62,7 @@
 	<div class="fixed m-10 z-50">
 		<div class="flex space-x-2">
 			<div class=" self-center">
-				<img src="{WEBUI_BASE_URL}/static/favicon.png" class=" w-8 rounded-full" alt="logo" />
+				<img src="{WEBUI_BASE_URL}/static/acn_full.png" class=" w-8 rounded-full" alt="logo" />
 			</div>
 		</div>
 	</div>
@@ -81,7 +82,7 @@
 			</div>
 		</div> -->
 
-		<div class="w-full max-w-lg px-10 md:px-16 bg-white min-h-screen flex flex-col">
+		<div class="w-full max-w-lg px-10 md:px-16 bg-white min-h-screen flex flex-col animate__fadeInDown"  transition:fade>
 			<div class=" my-auto pb-10 w-full">
 				<form
 					class=" flex flex-col justify-center"

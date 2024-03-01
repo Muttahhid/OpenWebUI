@@ -11,7 +11,7 @@
 
 	const dispatch = createEventDispatcher();
 
-	import { config, settings } from '$lib/stores';
+	import { WEBUI_NAME, config, settings } from '$lib/stores';
 	import { synthesizeOpenAISpeech } from '$lib/apis/openai';
 	import { imageGenerations } from '$lib/apis/images';
 	import { extractSentences } from '$lib/utils';
@@ -305,11 +305,12 @@
 
 		<div class="w-full overflow-hidden">
 			<Name>
-				{#if message.model in modelfiles}
+				<!-- {#if message.model in modelfiles}
 					{modelfiles[message.model]?.title}
 				{:else}
 					{message.model ? ` ${message.model}` : ''}
-				{/if}
+				{/if} -->
+				{$WEBUI_NAME}
 
 				{#if message.timestamp}
 					<span class=" invisible group-hover:visible text-gray-400 text-xs font-medium">

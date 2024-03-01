@@ -93,7 +93,7 @@
 	bind:this={navElement}
 	class="h-screen max-h-[100dvh] min-h-screen {show
 		? 'lg:relative w-[260px]'
-		: '-translate-x-[260px] w-[0px]'}  bg-black text-gray-200 shadow-2xl text-sm transition z-40 fixed top-0 left-0
+		: '-translate-x-[260px] w-[0px]'}  bg-black text-gray-200 shadow-2xl text-sm transition z-40 fixed top-0 left-0 acn-sidebar
         "
 >
 	<div
@@ -371,7 +371,7 @@
 							<div
 								class=" w-full flex justify-between rounded-xl px-3 py-2 hover:bg-gray-900 {chat.id ===
 								$chatId
-									? 'bg-gray-900'
+									? 'bg-gray-900 acn-active-chat'
 									: ''} transition whitespace-nowrap text-ellipsis"
 							>
 								<input bind:value={chatTitle} class=" bg-transparent w-full outline-none mr-10" />
@@ -380,7 +380,7 @@
 							<a
 								class=" w-full flex justify-between rounded-xl px-3 py-2 hover:bg-gray-900 {chat.id ===
 								$chatId
-									? 'bg-gray-900'
+									? 'bg-gray-900 acn-active-chat'
 									: ''} transition whitespace-nowrap text-ellipsis"
 								href="/c/{chat.id}"
 							>

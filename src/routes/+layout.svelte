@@ -62,6 +62,9 @@
 
 	<link rel="stylesheet" type="text/css" href="/themes/rosepine.css" />
 	<link rel="stylesheet" type="text/css" href="/themes/rosepine-dawn.css" />
+
+	<link rel="stylesheet" type="text/css" href="/themes/accenture-dark.css" />
+	<link rel="stylesheet" type="text/css" href="/themes/accenture-light.css" />
 </svelte:head>
 
 {#if loaded}

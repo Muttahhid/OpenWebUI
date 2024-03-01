@@ -3,7 +3,7 @@
 	import { createEventDispatcher, onMount } from 'svelte';
 	const dispatch = createEventDispatcher();
 
-	import { models, user } from '$lib/stores';
+	import { theme, models, user } from '$lib/stores';
 
 	import AdvancedParams from './Advanced/AdvancedParams.svelte';
 
@@ -11,8 +11,8 @@
 	export let getModels: Function;
 
 	// General
-	let themes = ['dark', 'light', 'rose-pine dark', 'rose-pine-dawn light'];
-	let theme = 'dark';
+	let themes = ['dark', 'light', 'rose-pine dark', 'rose-pine-dawn light', 'accenture-light', 'accenture-dark'];
+	let themeUsed = $theme;
 	let notificationEnabled = false;
 	let system = '';
 
@@ -65,7 +65,7 @@
 	onMount(async () => {
 		let settings = JSON.parse(localStorage.getItem('settings') ?? '{}');
 
-		theme = localStorage.theme ?? 'dark';
+		themeUsed = localStorage.theme ?? 'dark';
 		notificationEnabled = settings.notificationEnabled ?? false;
 		system = settings.system ?? '';
 
@@ -92,7 +92,7 @@
 				<div class=" self-center text-xs font-medium">Theme</div>
 				<div class="flex items-center relative">
 					<div class=" absolute right-16">
-						{#if theme === 'dark'}
+						{#if themeUsed === 'dark'}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 20 20"
@@ -105,7 +105,7 @@
 									clip-rule="evenodd"
 								/>
 							</svg>
-						{:else if theme === 'light'}
+						{:else if themeUsed === 'light'}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 20 20"
@@ -121,30 +121,32 @@
 
 					<select
 						class="w-fit pr-8 rounded py-2 px-2 text-xs bg-transparent outline-none text-right"
-						bind:value={theme}
+						bind:value={themeUsed}
 						placeholder="Select a theme"
 						on:change={(e) => {
-							localStorage.theme = theme;
+							localStorage.theme = themeUsed;
 
 							themes
-								.filter((e) => e !== theme)
+								.filter((e) => e !== themeUsed)
 								.forEach((e) => {
 									e.split(' ').forEach((e) => {
 										document.documentElement.classList.remove(e);
 									});
 								});
 
-							theme.split(' ').forEach((e) => {
+							themeUsed.split(' ').forEach((e) => {
 								document.documentElement.classList.add(e);
 							});
 
-							console.log(theme);
+							console.log(themeUsed);
 						}}
 					>
 						<option value="dark">Dark</option>
 						<option value="light">Light</option>
 						<option value="rose-pine dark">Rosé Pine</option>
 						<option value="rose-pine-dawn light">Rosé Pine Dawn</option>
+						<option value="accenture-light light">Accenture Light</option>
+						<option value="accenture-dark dark">Accenture Dark</option>
 					</select>
 				</div>
 			</div>
