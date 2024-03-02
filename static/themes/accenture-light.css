@@ -1,125 +1,6 @@
-/* .accenture-light * {
-	color: #403d52 !important;
-	stroke: #907aa9 !important;
+.accenture-light * {
+	transition: 200ms linear 50ms;
 }
-
-.accenture-light .py-2\.5.my-auto.flex.flex-col.justify-between.h-screen {
-	background: #a100ff;
-}
-
-.accenture-light .bg-white.dark\:bg-gray-800 {
-	background: #26233a;
-}
-
-.accenture-light .w-4.h-4 {
-	fill: #c4a7e7;
-}
-
-.accenture-light #chat-textarea {
-	background: #a100ff;
-	margin: 0.3rem;
-	padding: 0.5rem;
-}
-
-.accenture-light .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 {
-	background: #26233a !important;
-	padding-top: 0.6rem;
-}
-
-.accenture-light
-	.text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
-	background-color: #6e6a86;
-	transition: background-color 0.2s ease-out linear;
-}
-
-.accenture-light
-	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
-	background-color: #286983;
-	transition: background-color 0.2s ease-out linear;
-}
-
-.accenture-light
-	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center
-	> * {
-	fill: #9ccfd8 !important;
-	transition: fill 0.2s ease-out linear;
-}
-
-.accenture-light
-	.w-full.flex.justify-between.rounded-md.px-3.py-2.hover\:bg-gray-900.bg-gray-900.transition.whitespace-nowrap.text-ellipsis {
-	background-color: #56526e;
-	font-weight: bold;
-}
-
-.accenture-light .hover\:bg-gray-900:hover {
-	--tw-bg-opacity: 1;
-	background-color: rgb(57 53 82 / var(--tw-bg-opacity));
-}
-
-.accenture-light .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 {
-	background-color: #403d52;
-}
-
-.accenture-light .scrollbar-hidden.relative.overflow-x-auto.whitespace-nowrap.svelte-3g4avz {
-	border-radius: 16px 16px 0 0;
-}
-
-.accenture-light .base.enter.svelte-ug60r4 {
-	background-color: #393552;
-}
-
-.accenture-light .message.svelte-1nauejd {
-	color: #e0def4 !important;
-}
-
-.accenture-light #dropdownDots {
-	background-color: #403d52;
-}
-
-.accenture-light .flex.py-2\.5.px-3\.5.w-full.hover\:bg-gray-800.transition:hover {
-	background: #524f67;
-}
-
-.accenture-light .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900.shadow-3xl {
-	background-color: #26233a;
-}
-
-.accenture-light
-	.w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.resize-none {
-	background-color: #524f67;
-}
-
-.accenture-light
-	.w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.svelte-1vx7r9s {
-	background-color: #524f67;
-}
-
-.accenture-light
-	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 {
-	background-color: #403d52;
-}
-
-.accenture-light
-	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover {
-	background-color: #524f67;
-}
-
-.accenture-light .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100.transition.rounded {
-	background-color: #31748f;
-}
-
-
-.accenture-light .svelte-1ee93ns {
-	--primary: #eb6f92 !important;
-	--secondary: #e0def4 !important;
-}
-
-.accenture-light .svelte-11kvm4p {
-	--primary: #9ccfd8 !important;
-	--secondary: #1f1d2e !important;
-} */
-
-/* ----------------------------------------------------------- */
 
 /* Sidebar color */
 .accenture-light .acn-sidebar {
@@ -127,40 +8,95 @@
 	color: #e2dee4!important;
 }
 
-.accenture-light #chat-search > * {
+.accenture-light #chat-search > *,
+.accenture-light .app > *,
+.accenture-light #nav,
+.accenture-light .acn-message-input
+{
 	background-color: #fff !important;
 }
 
-.accenture-light .app > * {
-	background-color: #fff !important;
+.accenture-light .acn-suggestions{
+	background-color: #f9f9f9;
 }
 
-.accenture-light #nav {
-	background-color: #fff !important;
+.accenture-light .acn-suggestions:hover{
+	background-color: #ececec;
+}
+
+
+.accenture-dark .acn-message-input form,
+.accenture-light #chat-textarea {
+    background: #fff;
 }
 
 .accenture-light #chat-textarea {
-    background: #fff;
     margin: 0.3rem;
     padding: 0.5rem;
     border: 1px solid #4e4e4e80;
 }
 
-#sidebar-new-chat-button img{
+.accenture-light .acn-message-input form button[type=submit] {
+    background: #a100ff;
+    color: #fff;
+}
+
+.accenture-light #sidebar-new-chat-button img{
 	background:#fff;
 	padding: 2px;
 }
 
-.acn-sidebar a.acn-active-chat,
-.acn-sidebar a:hover,
-.acn-sidebar a:active,
-.acn-sidebar button:active,
-.acn-sidebar button:hover{
+.accenture-light .acn-sidebar a.acn-active-chat,
+.accenture-light .acn-sidebar a:hover,
+.accenture-light .acn-sidebar a:active,
+.accenture-light .acn-sidebar button:active,
+.accenture-light .acn-sidebar button:hover{
 	background: #673ab7!important;
 	color: #fff;
 	transition: ease-in-out;
 }
 
-.sidebar-toggle-button, .sidebar-toggle-button:hover{
+.accenture-light .sidebar-toggle-button, .sidebar-toggle-button:hover{
 	background: transparent!important;
+}
+
+/* Auth */
+.svelte-s3k1ub *{
+	color:#333333!important;
+}
+.svelte-s3k1ub button{
+	background-color: #a100ff !important;
+    color: #e2dee4 !important;
+}
+
+.accenture-light .svelte-s3k1ub a:hover,
+.accenture-light .svelte-s3k1ub a:active,
+.accenture-light .svelte-s3k1ub button:active,
+.accenture-light .svelte-s3k1ub button:hover{
+	color: #673ab7!important;
+	background: #fff;
+	transition: ease-in-out;
+}
+.accenture-light .acn-bg-transparent{
+	background: transparent!important;
+}
+
+.accenture-light .svelte-s3k1ub input{
+	border-color: #673ab7!important;
+}
+
+.accenture-light #dropdownDots{
+	background: #fff!important;
+	color:#333333!important;
+    bottom: 110px!important;
+
+}
+.accenture-light .acn-theme-switch {
+    width: 100%!important;
+    display: flex!important;
+	margin: 10px auto;
+}
+.accenture-light .acn-theme-switch > div {
+    width: auto;
+    margin: auto auto!important;
 }

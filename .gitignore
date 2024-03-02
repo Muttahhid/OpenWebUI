@@ -300,3 +300,4 @@ dist
 .pnp.*
 
 .history
+.vscode

@@ -3,7 +3,7 @@
 	import { createEventDispatcher, onMount } from 'svelte';
 	const dispatch = createEventDispatcher();
 
-	import { theme, models, user } from '$lib/stores';
+	import { defaultTheme, models, user } from '$lib/stores';
 
 	import AdvancedParams from './Advanced/AdvancedParams.svelte';
 
@@ -12,7 +12,7 @@
 
 	// General
 	let themes = ['dark', 'light', 'rose-pine dark', 'rose-pine-dawn light', 'accenture-light', 'accenture-dark'];
-	let themeUsed = $theme;
+	let themeUsed = defaultTheme;
 	let notificationEnabled = false;
 	let system = '';
 
@@ -65,7 +65,7 @@
 	onMount(async () => {
 		let settings = JSON.parse(localStorage.getItem('settings') ?? '{}');
 
-		themeUsed = localStorage.theme ?? 'dark';
+		themeUsed = localStorage.theme ?? defaultTheme;
 		notificationEnabled = settings.notificationEnabled ?? false;
 		system = settings.system ?? '';
 

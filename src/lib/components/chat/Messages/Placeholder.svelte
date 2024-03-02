@@ -20,7 +20,7 @@
 {#if models.length > 0}
 	<div class="m-auto text-center max-w-md px-2">
 		<div class="flex justify-center mt-8">
-			<div class="flex -space-x-4 mb-1">
+			<div class="flex -space-x-4 mb-1 animate__zoomIn animate__delay-2s">
 				{#each models as model, modelIdx}
 					<button
 						on:click={() => {
@@ -31,7 +31,7 @@
 							<img
 								src={modelfiles[model]?.imageUrl ?? `${WEBUI_BASE_URL}/static/favicon.png`}
 								alt="modelfile"
-								class=" w-14 rounded-full border-[1px] border-gray-200 dark:border-none"
+								class=" w-14  border-[1px] border-gray-200 dark:border-none"
 								draggable="false"
 							/>
 						{:else}
@@ -39,7 +39,7 @@
 								src={models.length === 1
 									? `${WEBUI_BASE_URL}/static/favicon.png`
 									: `${WEBUI_BASE_URL}/static/favicon.png`}
-								class=" w-14 rounded-full border-[1px] border-gray-200 dark:border-none"
+								class=" w-14 border-[1px] border-gray-200 dark:border-none"
 								alt="logo"
 								draggable="false"
 							/>
@@ -64,9 +64,9 @@
 					</div>
 				{/if}
 			{:else}
-				<div class=" line-clamp-1">Hello, {$user.name}</div>
+				<div class="animate__backInLeft animate__delay-2s line-clamp-1 ">Hello, {$user.name}</div>
 
-				<div>How can I help you today?</div>
+				<div class="animate__backInLeft animate__delay-4s">How can I help you today?</div>
 			{/if}
 		</div>
 	</div>

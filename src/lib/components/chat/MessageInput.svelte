@@ -448,7 +448,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-white dark:bg-gray-900">
+	<div class="bg-white dark:bg-gray-900 acn-message-input">
 		<div class="max-w-3xl px-2.5 mx-auto inset-x-0">
 			<div class=" pb-2">
 				<input

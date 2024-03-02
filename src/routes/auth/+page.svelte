@@ -62,7 +62,7 @@
 	<div class="fixed m-10 z-50">
 		<div class="flex space-x-2">
 			<div class=" self-center">
-				<img src="{WEBUI_BASE_URL}/static/acn_full.png" class=" w-8 rounded-full" alt="logo" />
+				<img src="{WEBUI_BASE_URL}/acn_full.png" class="" alt="logo" />
 			</div>
 		</div>
 	</div>
@@ -155,7 +155,7 @@
 							{mode === 'signin' ? `Don't have an account?` : `Already have an account?`}
 
 							<button
-								class=" font-medium underline"
+								class=" font-medium underline acn-bg-transparent"
 								type="button"
 								on:click={() => {
 									if (mode === 'signin') {
