@@ -59,10 +59,10 @@
 </script>
 
 {#if loaded}
-	<div class="fixed m-10 z-50">
-		<div class="flex space-x-2">
-			<div class=" self-center">
-				<img src="{WEBUI_BASE_URL}/acn_full.png" class="" alt="logo" />
+	<div class="m-10 z-50">
+		<div class="block space-x-2 w-full">
+			<div class="relative self-center">
+				<img src="{WEBUI_BASE_URL}/acn_full.png" class="acn-auth-logo" alt="logo" />
 			</div>
 		</div>
 	</div>

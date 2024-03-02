@@ -1,5 +1,6 @@
 .accenture-light * {
 	transition: 200ms linear 50ms;
+    /* color: #fff !important; */
 }
 
 /* Sidebar color */
@@ -32,11 +33,12 @@
 
 .accenture-light #chat-textarea {
     margin: 0.3rem;
+	/* color: #fff; */
     padding: 0.5rem;
     border: 1px solid #4e4e4e80;
 }
 
-.accenture-light .acn-message-input form button[type=submit] {
+.accenture-light .acn-message-input form button {
     background: #a100ff;
     color: #fff;
 }
@@ -51,13 +53,14 @@
 .accenture-light .acn-sidebar a:active,
 .accenture-light .acn-sidebar button:active,
 .accenture-light .acn-sidebar button:hover{
-	background: #673ab7!important;
+	background: #004dff!important;
 	color: #fff;
 	transition: ease-in-out;
 }
 
 .accenture-light .sidebar-toggle-button, .sidebar-toggle-button:hover{
 	background: transparent!important;
+	/* color: #fff; */
 }
 
 /* Auth */
@@ -73,7 +76,7 @@
 .accenture-light .svelte-s3k1ub a:active,
 .accenture-light .svelte-s3k1ub button:active,
 .accenture-light .svelte-s3k1ub button:hover{
-	color: #673ab7!important;
+	color: #004dff!important;
 	background: #fff;
 	transition: ease-in-out;
 }
@@ -82,7 +85,7 @@
 }
 
 .accenture-light .svelte-s3k1ub input{
-	border-color: #673ab7!important;
+	border-color: #004dff!important;
 }
 
 .accenture-light #dropdownDots{
@@ -99,4 +102,18 @@
 .accenture-light .acn-theme-switch > div {
     width: auto;
     margin: auto auto!important;
+}
+
+.accenture-light .acn-prompt-title{
+	/* color: #fff; */
+}
+
+.toaster * {
+    color: #0d0d0d !important;
+}
+
+.accenture-light .acn-auth-logo{
+	position: absolute;
+    right: 50%;
+    translate: 50%;
 }

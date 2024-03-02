@@ -37,5 +37,6 @@ export const showSettings = writable(false);
 export const showChangelog = writable(false);
 
 export const defaultModelIndex = 0;
+export const defaultModels = ['tinyllama:latest'];
 
 export const defaultTheme = 'accenture-light';

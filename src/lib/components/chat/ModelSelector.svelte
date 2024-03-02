@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { setDefaultModels } from '$lib/apis/configs';
-	import { models, showSettings, defaultModelIndex, settings, user } from '$lib/stores';
+	import { models, showSettings, defaultModelIndex, defaultModels, settings, user } from '$lib/stores';
 	import { onMount, tick } from 'svelte';
 	import toast from 'svelte-french-toast';
 
-	// export let selectedModels = [$models[0].id];
-	export let selectedModels = [''];
+	export let selectedModels = defaultModels;
 	export let disabled = false;
 
 
@@ -34,6 +33,8 @@
 	});
 
 	$: if (selectedModels.length > 0 && $models.length > 0) {
+		selectedModels = defaultModels;
+		console.log("selectedModels: ", selectedModels);
 		selectedModels = selectedModels.map((model) =>
 			$models.map((m) => m.id).includes(model) ? model : ''
 		);

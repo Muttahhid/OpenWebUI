@@ -1,5 +1,6 @@
 .accenture-dark * {
 	transition: 200ms linear 50ms;
+    color: #fff !important;
 }
 
 /* Sidebar color */
@@ -27,18 +28,19 @@
 
 .accenture-dark #chat-textarea,
 .accenture-dark .acn-message-input form {
-    background: #333333;
+    background: #333333!important;
 }
 
 .accenture-dark #chat-textarea{
     margin: 0.3rem;
+	color: #fff;
     padding: 0.5rem;
     border: 1px solid #4e4e4e80;
 }
 
-.accenture-dark .acn-message-input form button[type=submit] {
-    background: #262626;
-    color: #fff;
+.accenture-dark .acn-message-input form button {
+    background: #262626!important;
+    color: #fff!important;
 }
 
 .accenture-dark #sidebar-new-chat-button img{
@@ -58,6 +60,7 @@
 
 .accenture-dark .sidebar-toggle-button, .sidebar-toggle-button:hover{
 	background: transparent!important;
+	color: #fff;
 }
 
 /* Auth */
@@ -103,4 +106,14 @@
 
 .accenture-dark .acn-prompt-title{
 	color: #fff;
+}
+
+.toaster * {
+    color: #0d0d0d !important;
+}
+
+.accenture-dark .acn-auth-logo{
+	position: absolute;
+    right: 50%;
+    translate: 50%;
 }
