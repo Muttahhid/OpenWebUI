@@ -62,7 +62,7 @@
 	<div class="m-10 z-50">
 		<div class="block space-x-2 w-full">
 			<div class="relative self-center">
-				<img src="{WEBUI_BASE_URL}/acn_full.png" class="acn-auth-logo" alt="logo" />
+				<img src="{WEBUI_BASE_URL}/acn_full.png" class="acn-auth-logo animate__fadeInLeft" alt="logo" />
 			</div>
 		</div>
 	</div>
@@ -82,10 +82,10 @@
 			</div>
 		</div> -->
 
-		<div class="w-full max-w-lg px-10 md:px-16 bg-white min-h-screen flex flex-col animate__fadeInDown"  transition:fade>
+		<div class="w-full max-w-lg px-10 md:px-16 bg-white min-h-screen flex flex-col"  transition:fade>
 			<div class=" my-auto pb-10 w-full">
 				<form
-					class=" flex flex-col justify-center"
+					class=" flex flex-col justify-center  animate__fadeInDown"
 					on:submit|preventDefault={() => {
 						submitHandler();
 					}}

@@ -109,7 +109,7 @@
 										/>
 									</svg>
 
-									<div class=" text-xs">Admin Settings</div>
+									<div class=" accenture-text-dark text-xs">Admin Settings</div>
 								</button>
 							</div>
 						</div>
@@ -120,7 +120,7 @@
 						<hr class=" my-3 dark:border-gray-600" />
 
 						<div class="scrollbar-hidden relative overflow-x-auto whitespace-nowrap">
-							<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 table-auto">
+							<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 table-auto accenture-text-dark">
 								<thead
 									class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
 								>

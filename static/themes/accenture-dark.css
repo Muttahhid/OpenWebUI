@@ -118,6 +118,10 @@
     translate: 50%;
 }
 
-.modal-content div {
+.accenture-dark .modal-content div {
     color: #000 !important;
+}
+
+.accenture-dark .accenture-text-dark{
+    color: #0d0d0d !important;
 }
