@@ -14,6 +14,7 @@
 	import { getLiteLLMModels } from '$lib/apis/litellm';
 	import { getDocs } from '$lib/apis/documents';
 	import { getAllChatTags } from '$lib/apis/chats';
+	import { scanDocs } from '$lib/apis/rag';
 
 	import {
 		user,
@@ -106,6 +107,17 @@
 				console.log('IDB Not Found');
 			}
 
+			// scan for newly uploaded documents
+			const scanHandler = async () => {
+				const res = await scanDocs(localStorage.token);
+
+				if (res) {
+					await documents.set(await getDocs(localStorage.token));
+					toast.success('Scan complete!');
+				}
+			};
+			scanHandler();
+
 			console.log();
 
 			await models.set(await getModels());
@@ -115,7 +127,7 @@
 
 			await modelfiles.set(await getModelfiles(localStorage.token));
 			await prompts.set(await getPrompts(localStorage.token));
-			await documents.set(await getDocs(localStorage.token));
+			// await documents.set(await getDocs(localStorage.token));
 			await tags.set(await getAllChatTags(localStorage.token));
 
 			modelfiles.subscribe(async () => {
